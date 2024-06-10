@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Jogo de bingo</title>
+</head>
+
+<body>
+    <section class="competidores">
+        <div class="carton" id="add-cart">
+            <label for="player">Número: </label>
+            <input type="text" id="player" name="player" minlength="2" maxlength="5" required />
+            <button class="btn-yellow" id="changeColor">Trocar Cor</button>
+            <div class="carton__numero-contenedor" id="playerBoard"></div>
+            <div class="carton__numero-add">
+                <button class="aut-btn" id="saveCartela">Salvar cartela</button>
+            </div>
+        </div>
+        <div class="mezclador">
+            <input type="number" name="quantity" min="1" max="75" id="numberDraw">
+            <button class="save-num" id="saveNum">Salvar</button>
+        </div>
+        <div class="carton hidden" id="bestCard">
+            <h2 id="cpuName">CPU</h2>
+            <div class="carton__numero-contenedor" id="cpuBoard"></div>
+        </div>
+    </section>
+
+    <section class="jugada-automatica" id="autoPlay">
+        <button class="aut-btn" id="novaRodada">Nova rodada</button>
+        <button class="aut-btn btn-red" id="resetCartela">Limpar cartelas</button>
+    </section>
+
+    <section class="numeros" id="totalNumbers"></section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
